@@ -50,9 +50,34 @@
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+    display: inline-block;
 }
 .categories_menu li {
   display: inline;
+  padding: 7px;
+}
+
+  .search {
+ color: #333;
+ float: right;
+ padding: 6px;
+ width:100%;
+
+}
+.search--inverse {
+ color: #fff;
+ background: #333;
+}
+.search__submit {
+ background: #333;
+ border: 0;
+ color: #fff;
+ height: 2rem;
+ display: inline-block;
+}
+.search__submit--inverse {
+ color: #333;
+ background: #ccc;
 }
 </style>
 <body>
@@ -65,12 +90,15 @@
     <li style="float:right"><a href="#contact">Contact</a></li>
 </ul>
 </div>
-<div class="topnav">
-    <input type="text" placeholder="Поиск по каталогу">
-</div>
+<form class="search">
+  <div class="search__wrapper">
+ <input type="text" id="s" class="search__input" placeholder="Search for"/>
+ <button type="submit" class="search__submit">Search</button>
+  </div>
+</form>
 <div class="categories_menu">
     <ul>
-        <li><a>Сноуборд</a></li>
+        <li><a href="snowboard/snowboard_main.html">Сноуборд</a></li>
         <li><a>Велосипед</a></li>
         <li><a>BMX</a></li>
         <li><a>Самокат</a></li>
